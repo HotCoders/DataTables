@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>   
+    <head>
+    <title>Datatable Example</title>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src ="https://datatables.net/dev/accessibility/DataTables_1_10/media/js/jquery.dataTables.js"></script>
+    <script src="./datatable.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="row" style="margin-top:25px;">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center  ">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addDetails">
+                    Add Row
+                    </button>
+            </div>
+        </div>
+      <div class="container">
+        <table id="example" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>age</th>
+                    <th>email</th>
+                    <th>address</th>
+                    <th>Country</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+         
+            <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>age</th>
+                    <th>email</th>
+                    <th>address</th>
+                    <th>Country</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" >Add data to Table</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id ="frmdata">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" placeholder="Enter name" id="fullname">
+                <span class="help-block">Please fill the Name</span>
+              </div>
+            <div class="form-group">
+                <label for="email">age:</label>
+                <input type="age" class="form-control" placeholder="Enter age" id="age">
+                <span class="help-block">Please fill the age</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter email" id="email">
+                <span class="help-block">Please fill the email address</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Address:</label>
+                <input type="address" class="form-control" placeholder="Enter address" id="address">
+                <span class="help-block">Please fill the address</span>
+              </div>
+              <div class="form-group">
+                <label for="email">country:</label>
+                <input type="country" class="form-control" placeholder="Enter country" id="country">
+                <span class="help-block">Please fill the country</span>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btnAddTable">Add to Table</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal End-->
+</body>
+</html>
